@@ -16,12 +16,17 @@
   </div>
 <!-- Change these to be dropdowns -->
   <div class="field">
-    <%= f.label :pick_up %>
-    <%= f.select :pick_up, @locations.map{|x| ["#{x.city}, #{x.state}"] } %>
+    <%= f.label :pick_up_id %>
+    <%= f.select :pick_up_id, @locations.map{|x| ["#{x.city}, #{x.state}",x.id] } %>
   </div>
   <div class="field">
-    <%= f.label :drop_off %>
-    <%= f.select :drop_off, @locations.map{|x| ["#{x.city}, #{x.state}"] } %>
+    <%= f.label :drop_off_id %>
+    <%= f.select :drop_off_id, @locations.map{|x| ["#{x.city}, #{x.state}",x.id] } %>
+  </div>
+    <div class="field">
+
+    <%= f.radio_button :duration, "1", checked: order.duration == 1 %> <%= f.label :duration, "Express" %>
+    <%= f.radio_button :duration, "2", checked: order.duration == 2 %> <%= f.label :duration, "3-5 day" %>
   </div>
   <div class="actions">
     <%= f.submit %>

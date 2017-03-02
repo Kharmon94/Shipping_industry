@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @order.user %>
+  <%= @order.user.email %>
 </p>
 
 <p>
@@ -12,12 +12,12 @@
 
 <p>
   <strong>Pick up:</strong>
-  <%= @order.pick_up %>
+  <%= @order.pick_up.city %>
 </p>
 
 <p>
   <strong>Drop off:</strong>
-  <%= @order.drop_off %>
+  <%= @order.drop_off.city %>
 </p>
 
 <p>

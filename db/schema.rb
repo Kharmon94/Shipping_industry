@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20170301214802) do
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "description"
-    t.integer  "pick_up"
-    t.integer  "drop_off"
+    t.integer  "pick_up_id"
+    t.integer  "drop_off_id"
     t.decimal  "cost"
     t.integer  "vehicle_id"
     t.datetime "created_at",  null: false

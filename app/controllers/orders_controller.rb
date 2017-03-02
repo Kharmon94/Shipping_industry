@@ -25,7 +25,29 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    # Pick up Costs
+    pickup_location = Location.find @order.pickup_location
+    if pickup_location.state == "CA"
+      @order.cost = 100
+    elsif pickup_location.state == "AZ"
+      @order.cost = 199
+    else
+      @order.cost = 299
+    end
+    if @order.duration == "1"
+      @order.cost += 49
+      @order.vehicle_id = 3
+    elsif @order.duration == "2"
+      @order.cost += 88
+      @order.vehicle_id = 2
+    else 
+      @order.vehicle_id = 1
+    end
     @order = Order.new(order_params)
+    @locations = Location.all
+    @order.user_id = current_user.id
+
+    @order.vehicle_id = 1
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
@@ -69,6 +91,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:user_id, :description, :pick_up, :drop_off, :cost, :vehicle_id)
+      params.require(:order).permit(:user_id, :description, :pick_up_id, :drop_off_id, :cost, :vehicle_id)
     end
 end

@@ -18,6 +18,9 @@
 # ])
 ### Vehicles
 Vehicle.create([
+   {
+    name: 'Unassigned'
+  },
   {
     name: 'Falcon',
     make: 'Ford',
