@@ -11,37 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
+
 
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
-
+<!-- Change these to be dropdowns -->
   <div class="field">
     <%= f.label :pick_up %>
-    <%= f.number_field :pick_up %>
+    <%= f.select :pick_up, @locations.map{|x| ["#{x.city}, #{x.state}, x.id"] } %>
   </div>
 
   <div class="field">
     <%= f.label :drop_off %>
-    <%= f.number_field :drop_off %>
+    <%= f.select :drop_off, @locations.map{|x| ["#{x.city}, #{x.state}, x.id"] } %>
   </div>
 
-  <div class="field">
-    <%= f.label :cost %>
-    <%= f.text_field :cost %>
-  </div>
-
-  <div class="field">
-    <%= f.label :vehicle_id %>
-    <%= f.text_field :vehicle_id %>
-  </div>
-
+  
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<!-- , @locations.map{|x| ["#{x.city}, #{x.state}, x.id"] }  -->

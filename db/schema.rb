@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228201938) do
+ActiveRecord::Schema.define(version: 20170301214802) do
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "city"
+    t.string   "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
@@ -40,6 +47,16 @@ ActiveRecord::Schema.define(version: 20170228201938) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "vehicles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "make"
+    t.string   "model"
+    t.string   "license_number", limit: 10
+    t.string   "license_state",  limit: 2
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
