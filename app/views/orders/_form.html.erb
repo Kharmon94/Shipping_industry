@@ -10,9 +10,6 @@
       </ul>
     </div>
   <% end %>
-
-
-
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
@@ -20,15 +17,12 @@
 <!-- Change these to be dropdowns -->
   <div class="field">
     <%= f.label :pick_up %>
-    <%= f.select :pick_up, @locations.map{|x| ["#{x.city}, #{x.state}, x.id"] } %>
+    <%= f.select :pick_up, @locations.map{|x| ["#{x.city}, #{x.state}"] } %>
   </div>
-
   <div class="field">
     <%= f.label :drop_off %>
-    <%= f.select :drop_off, @locations.map{|x| ["#{x.city}, #{x.state}, x.id"] } %>
+    <%= f.select :drop_off, @locations.map{|x| ["#{x.city}, #{x.state}"] } %>
   </div>
-
-  
   <div class="actions">
     <%= f.submit %>
   </div>

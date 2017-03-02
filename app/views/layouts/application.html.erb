@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shipments</title>
+    <title>Shipping_Industry</title>
     <!-- <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css"> -->
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body>
+  <div class="navbar-fixed">
+    <nav class="navbar-fixed blue darken-4 main-navigation" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo  white-text">Home</a>
+      <ul class="right hide-on-med-and-down main-navigation">
+        <li><a href="">Contact Us Coming soon</a></li>
+        <li><a href="/orders/new">Create New Order</a></li>
+        <li><a href="/users/sign_out">Sign out</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-  <body>    
-  <ul class="nav">
-  <li class="active"><a href="/">Home</a></li>
-  <li class="active"><a href="/users/sign_in">Login</a></li>
-  <li class="active"><a href="/orders/new">Create Your Order</a></li>
-  <li class="active"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-</ul>
+
+
+  <!-- <div class="nav">
+   <div class="active"><a href="/">Home</a></div>
+   <div class="active"><a href="/users/sign_in">Login</a></div>
+   <div class="active"><a href="/orders/new">Create Your Order</a></div>
+   <div class="active"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></div>
+  </div>
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <p class="alert"><%= alert %></p> -->
     <%= yield %>
   </body>
 </html>
