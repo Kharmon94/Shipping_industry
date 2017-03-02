@@ -26,23 +26,23 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     # Pick up Costs
-    pickup_location = Location.find @order.pickup_location
-    if pickup_location.state == "CA"
-      @order.cost = 100
-    elsif pickup_location.state == "AZ"
-      @order.cost = 199
-    else
-      @order.cost = 299
-    end
-    if @order.duration == "1"
-      @order.cost += 49
-      @order.vehicle_id = 3
-    elsif @order.duration == "2"
-      @order.cost += 88
-      @order.vehicle_id = 2
-    else 
-      @order.vehicle_id = 1
-    end
+    # pickup_location = Location.find @order.pickup_location
+    # if pickup_location.state == "CA"
+    #   @order.cost = 100
+    # elsif pickup_location.state == "AZ"
+    #   @order.cost = 199
+    # else
+    #   @order.cost = 299
+    # end
+    # if @order.duration == "1"
+    #   @order.cost += 49
+    #   @order.vehicle_id = 3
+    # elsif @order.duration == "2"
+    #   @order.cost += 88
+    #   @order.vehicle_id = 2
+    # else 
+    #   @order.vehicle_id = 1
+    # end
     @order = Order.new(order_params)
     @locations = Location.all
     @order.user_id = current_user.id
