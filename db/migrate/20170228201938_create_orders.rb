@@ -8,6 +8,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.decimal :cost
       t.string :duration
       t.integer :vehicle_id
+      t.integer :status
       t.references :vehicle, foreign_key: true
 
       t.timestamps

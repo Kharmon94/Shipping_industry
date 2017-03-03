@@ -72,3 +72,6 @@ class VehiclesController < ApplicationController
       params.fetch(:vehicle, {})
     end
 end
+
+
+# params.require(:vehicle).permit(:name,)

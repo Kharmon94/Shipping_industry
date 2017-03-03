@@ -18,12 +18,12 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.user %></td>
+        <td><%= order.user.email %></td>
         <td><%= order.description %></td>
-        <td><%= order.pick_up %></td>
-        <td><%= order.drop_off %></td>
+        <td><%= order.pick_up.city %></td>
+        <td><%= order.drop_off.city %></td>
         <td><%= order.cost %></td>
-        <td><%= order.vehicle %></td>
+        <td><%= order.vehicle_id %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
