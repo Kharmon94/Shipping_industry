@@ -25,7 +25,9 @@ ActiveRecord::Schema.define(version: 20170301214802) do
     t.integer  "pick_up_id"
     t.integer  "drop_off_id"
     t.decimal  "cost"
+    t.string   "duration"
     t.integer  "vehicle_id"
+    t.integer  "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_orders_on_user_id"

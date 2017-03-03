@@ -2,7 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#contact{
+	position: absolute;
+	margin: 10%;
+	margin-top: 4%;
+	background-color: lightgrey;
+	padding: 40px;
+	border: inset;
+	border-color: grey;
+	p{
+		font-size: 140%;
+		font-padding: 10px
 
-p {
-	width: 300px;
+
+	}
 }
