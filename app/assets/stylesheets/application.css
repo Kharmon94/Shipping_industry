@@ -16,4 +16,8 @@
 #nav{
 	display: block;
 	position: center;
+	background-color: white;
+	padding: 6px;
+	padding-top: 8px;
+	border: outset;
 }
