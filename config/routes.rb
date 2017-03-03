@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   get '/users' => 'users#index'
   get '/users/:id' => 'users#show'
+  get '/contact' => 'static#index'
 end
 	
