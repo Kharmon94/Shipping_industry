@@ -23,9 +23,6 @@
     <%= f.label :drop_off_id %>
     <%= f.select :drop_off_id, @locations.map{|x| ["#{x.city}, #{x.state}",x.id] } %>
   </div>
-    <div class="field">
-
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
