@@ -1,4 +1,4 @@
-# README
+## Shipping industry
 Red Pinapple Express Shipping
 
 Ruby v-2.4.0
@@ -11,11 +11,13 @@ Langueges used: -HTML5
                 -Ruby
                 -Ruby on Rails
 
-Basic goal of this project was to simulate a possible template for a Shipping Company.
-User authentication capabilitys are envoked utilizing devise.
+Basic goal of this project was to simulate a possible template for a Shipping Company. Project to allow Shippers to process orders.
+User authentication capabilitys are envoked utilizing devise. 
 
 Credit: -Steve Deleon
         -Kyle Harmon
 
 
 
+Programs used:
+- Rails, Devise, HTML, CSS, Javascript
